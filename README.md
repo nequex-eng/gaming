@@ -2,6 +2,8 @@
 
 A bilingual (English / Chinese) game navigation homepage for four independent interactive worlds.
 
+Live site: https://gamingcafe.pages.dev/
+
 ## Included worlds
 
 - Wangwang Coffee — https://wangwang-coffee.pages.dev/
@@ -9,14 +11,12 @@ A bilingual (English / Chinese) game navigation homepage for four independent in
 - Helix Temple — https://helixtemple.com
 - Breaking Bad World — https://breakingbad-world.pages.dev
 
-## Deploy with Cloudflare Pages
+## Cloudflare Pages
 
-This is a static site with no build step.
-
-1. Create a Cloudflare Pages project connected to `nequex-eng/gaming`.
-2. Production branch: `main`.
-3. Build command: leave empty.
-4. Build output directory: `/` (repository root).
-5. Deploy.
+Connected to Cloudflare Pages project `gamingcafe`.
+- Repository: `nequex-eng/gaming`
+- Production branch: `main`
+- Build command: none (static HTML)
+- Build output directory: `/` (repository root)
 
 The homepage is `index.html`. Language switching defaults to English and remembers the visitor's choice in local storage.
