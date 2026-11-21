@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#10131a">
+<meta name="description" content="A collection of playable worlds, experiments and interactive games by nequex-eng.">
+<meta property="og:title" content="PLAYROOM — Worlds to Explore">
+<meta property="og:description" content="Four worlds. Four different ways to play. Explore the collection.">
+<meta property="og:type" content="website">
+<title>PLAYROOM — Worlds to Explore</title>
+<style>
+:root{color-scheme:dark;--bg:#0d1016;--panel:#151a23;--muted:#9aa5b5;--line:#ffffff16;--text:#f4f6fb;--accent:#b6f36b}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at 50% -15%,#293548 0,transparent 48%),var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;min-height:100vh}
+a{color:inherit;text-decoration:none}.wrap{width:min(1160px,calc(100% - 40px));margin:auto}
+header{height:76px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}
+.brand{display:flex;align-items:center;gap:11px;font-size:15px;font-weight:850;letter-spacing:.16em}.mark{width:30px;height:30px;border:1px solid #b6f36b88;border-radius:9px;display:grid;place-items:center;color:var(--accent);font-size:17px}
+.navright{display:flex;align-items:center;gap:22px;color:var(--muted);font-size:13px}.lang{border:1px solid var(--line);background:#ffffff08;color:var(--text);padding:8px 12px;border-radius:999px;cursor:pointer;font:inherit}
+.hero{padding:76px 0 48px;text-align:center}.eyebrow{color:var(--accent);font-size:11px;letter-spacing:.23em;font-weight:800;text-transform:uppercase}.hero h1{font-size:clamp(42px,7vw,76px);letter-spacing:-.065em;line-height:.98;margin:18px 0 18px}.hero p{color:var(--muted);font-size:16px;line-height:1.7;max-width:590px;margin:0 auto}.count{margin-top:27px;color:#718095;font-size:11px;letter-spacing:.16em;text-transform:uppercase}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;padding-bottom:76px}
+.game{position:relative;display:flex;flex-direction:column;min-height:350px;overflow:hidden;border:1px solid var(--line);border-radius:18px;background:var(--panel);transition:transform .25s,border-color .25s,box-shadow .25s}
+.game:hover{transform:translateY(-5px);border-color:#ffffff45;box-shadow:0 20px 55px #0007}.art{height:205px;position:relative;overflow:hidden;isolation:isolate}
+.art:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,#111722 100%);z-index:-1}
+.art .scene{position:absolute;inset:0;display:grid;place-items:center;font-size:78px;filter:drop-shadow(0 12px 22px #0008)}
+.art .orb{position:absolute;width:240px;height:240px;border-radius:50%;filter:blur(1px);opacity:.72;right:8%;top:-45%}
+.coffee{background:linear-gradient(135deg,#4a2d20,#b87845 58%,#e8c18a)}.coffee .orb{background:#f7d49b}.coffee .scene{transform:translateY(10px)}
+.resort{background:linear-gradient(145deg,#0d6572,#40b5ad 55%,#e2c18a)}.resort .orb{background:#ffe4a4}.resort .scene{transform:translateY(12px)}
+.temple{background:linear-gradient(145deg,#142e31,#47766a 55%,#b5a27c)}.temple .orb{background:#d9d3a0}.temple .scene{transform:translateY(8px)}
+.bb{background:linear-gradient(145deg,#4b592b,#a2a34e 55%,#d5a45b)}.bb .orb{background:#e8c66d}.bb .scene{transform:translateY(8px)}
+.tag{position:absolute;top:16px;left:17px;padding:6px 9px;border:1px solid #ffffff40;border-radius:5px;background:#10151b88;backdrop-filter:blur(8px);font-size:9px;letter-spacing:.15em;text-transform:uppercase;font-weight:800}
+.info{padding:19px 21px 20px;display:flex;flex-direction:column;flex:1}.meta{color:var(--accent);font-size:10px;font-weight:800;letter-spacing:.15em;text-transform:uppercase}.info h2{font-size:24px;letter-spacing:-.04em;margin:8px 0 7px}.info p{color:var(--muted);font-size:13px;line-height:1.6;margin:0;max-width:470px}.bottom{display:flex;align-items:center;justify-content:space-between;margin-top:auto;padding-top:21px}.visit{font-size:12px;font-weight:750;letter-spacing:.04em;display:flex;align-items:center;gap:9px}.arrow{width:29px;height:29px;border-radius:50%;display:grid;place-items:center;background:#ffffff12;transition:background .2s,transform .2s}.game:hover .arrow{background:var(--accent);color:#101510;transform:translateX(2px)}
+footer{border-top:1px solid var(--line);padding:23px 0 32px;color:#718095;font-size:11px;display:flex;justify-content:space-between;gap:12px}
+@media(max-width:700px){.wrap{width:min(100% - 28px,520px)}header{height:65px}.navright{gap:10px}.navlink{display:none}.hero{padding:58px 0 34px}.hero p{font-size:14px}.grid{grid-template-columns:1fr;gap:14px;padding-bottom:50px}.game{min-height:330px}.art{height:190px}.info h2{font-size:22px}footer{flex-direction:column}}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header><a class="brand" href="#" aria-label="Playroom home"><span class="mark">✳</span><span>PLAYROOM</span></a><div class="navright"><span class="navlink" data-i18n="collection">THE COLLECTION</span><button class="lang" id="lang" type="button" aria-label="Switch language">中文</button></div></header>
+<main><section class="hero"><div class="eyebrow" data-i18n="eyebrow">INDEPENDENT WORLDS & GAMES</div><h1 data-i18n="headline">Find your next<br>world to explore.</h1><p data-i18n="intro">A growing collection of interactive places, playful challenges and alternate worlds. Pick a door and step inside.</p><div class="count" data-i18n="count">04 WORLDS · ONE PLAYROOM</div></section>
+<section class="grid" aria-label="Game collection">
+<a class="game" href="https://wangwang-coffee.pages.dev/" target="_blank" rel="noopener noreferrer"><div class="art coffee"><span class="orb"></span><span class="scene" aria-hidden="true">☕</span><span class="tag" data-i18n="tag1">REFLEX CHALLENGE</span></div><div class="info"><div class="meta" data-i18n="meta1">SPEED · OBSERVATION</div><h2>Wangwang Coffee</h2><p data-i18n="desc1">Step behind the counter. Test your speed and sharp eyes in a fast-paced coffee challenge.</p><div class="bottom"><span class="visit" data-i18n="visit">ENTER WORLD <span>↗</span></span><span class="arrow">→</span></div></div></a>
+<a class="game" href="https://tidewater-resort.pages.dev/" target="_blank" rel="noopener noreferrer"><div class="art resort"><span class="orb"></span><span class="scene" aria-hidden="true">🌴</span><span class="tag" data-i18n="tag2">ISLAND ESCAPE</span></div><div class="info"><div class="meta" data-i18n="meta2">DISCOVERY · LEISURE</div><h2>Tidewater Resort</h2><p data-i18n="desc2">Leave the everyday behind and explore a tropical resort world at your own pace.</p><div class="bottom"><span class="visit" data-i18n="visit">ENTER WORLD <span>↗</span></span><span class="arrow">→</span></div></div></a>
+<a class="game" href="https://helixtemple.com" target="_blank" rel="noopener noreferrer"><div class="art temple"><span class="orb"></span><span class="scene" aria-hidden="true">🏯</span><span class="tag" data-i18n="tag3">SOCIAL SANCTUARY</span></div><div class="info"><div class="meta" data-i18n="meta3">ZEN · COMMUNITY</div><h2>Helix Temple</h2><p data-i18n="desc3">A living digital temple. Wander, meet other visitors, share wishes and enjoy a quieter space.</p><div class="bottom"><span class="visit" data-i18n="visit">ENTER WORLD <span>↗</span></span><span class="arrow">→</span></div></div></a>
+<a class="game" href="https://breakingbad-world.pages.dev" target="_blank" rel="noopener noreferrer"><div class="art bb"><span class="orb"></span><span class="scene" aria-hidden="true">🚐</span><span class="tag" data-i18n="tag4">OPEN WORLD</span></div><div class="info"><div class="meta" data-i18n="meta4">EXPLORATION · STORY</div><h2>Breaking Bad World</h2><p data-i18n="desc4">Enter a desert underworld inspired by the TV universe. Explore its places, vehicles and characters.</p><div class="bottom"><span class="visit" data-i18n="visit">ENTER WORLD <span>↗</span></span><span class="arrow">→</span></div></div></a>
+</section></main>
+<footer><span>© <span id="year"></span> PLAYROOM</span><span data-i18n="footer">A collection of independent interactive experiences.</span></footer>
+</div>
+<script>
+const copy={
+en:{collection:"THE COLLECTION",eyebrow:"INDEPENDENT WORLDS & GAMES",headline:"Find your next<br>world to explore.",intro:"A growing collection of interactive places, playful challenges and alternate worlds. Pick a door and step inside.",count:"04 WORLDS · ONE PLAYROOM",tag1:"REFLEX CHALLENGE",meta1:"SPEED · OBSERVATION",desc1:"Step behind the counter. Test your speed and sharp eyes in a fast-paced coffee challenge.",tag2:"ISLAND ESCAPE",meta2:"DISCOVERY · LEISURE",desc2:"Leave the everyday behind and explore a tropical resort world at your own pace.",tag3:"SOCIAL SANCTUARY",meta3:"ZEN · COMMUNITY",desc3:"A living digital temple. Wander, meet other visitors, share wishes and enjoy a quieter space.",tag4:"OPEN WORLD",meta4:"EXPLORATION · STORY",desc4:"Enter a desert underworld inspired by the TV universe. Explore its places, vehicles and characters.",visit:"ENTER WORLD <span>↗</span>",footer:"A collection of independent interactive experiences."},
+zh:{collection:"游戏精选",eyebrow:"独立游戏 · 虚拟世界",headline:"下一段冒险，<br>从这里开始。",intro:"持续扩展的互动世界与游戏体验。选择一扇门，进入一个不同的世界。",count:"04 个世界 · 一个游戏入口",tag1:"手速与观察挑战",meta1:"反应速度 · 观察力",desc1:"走进旺旺咖啡店，在紧张有趣的挑战中考验你的手速与观察力。",tag2:"海岛度假",meta2:"探索 · 休闲",desc2:"暂别日常，走进热带海岛度假世界，按照自己的节奏探索。",tag3:"线上禅意社区",meta3:"禅意 · 社交",desc3:"一座持续开放的数字寺庙。闲逛、结识访客、写下心愿，享受片刻宁静。",tag4:"开放世界",meta4:"探索 · 剧情",desc4:"进入灵感源自经典美剧的荒漠世界，探索场景、车辆与人物。",visit:"进入世界 <span>↗</span>",footer:"持续创造中的独立互动体验。"}
+};
+let language=localStorage.getItem("playroom-language")||"en";
+function render(){document.documentElement.lang=language==="zh"?"zh-CN":"en";document.querySelectorAll("[data-i18n]").forEach(el=>{const k=el.dataset.i18n;if(copy[language][k])el.innerHTML=copy[language][k]});document.getElementById("lang").textContent=language==="en"?"中文":"English"}
+document.getElementById("lang").addEventListener("click",()=>{language=language==="en"?"zh":"en";localStorage.setItem("playroom-language",language);render()});
+document.getElementById("year").textContent=new Date().getFullYear();render();
+</script>
+</body></html>
